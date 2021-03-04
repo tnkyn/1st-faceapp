@@ -36,7 +36,7 @@ if uploaded_file is not None:
     for result in results:
         rect = result['faceRectangle']
         text = result['faceAttributes']['gender']+'/'+str(result['faceAttributes']['age'])
-        font = ImageFont.truetype('/System/Library/Fonts/Avenir Next Condensed.ttc',32)
+        font = ImageFont.truetype('/System/Library/Fonts/Geneva.dfont',32)
         
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'], rect['top']), (rect['left']+rect['width'], rect['top']+rect['height'])], fill=None, outline='green', width=5)
